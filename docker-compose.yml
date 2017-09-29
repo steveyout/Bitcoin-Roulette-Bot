@@ -1,0 +1,23 @@
+version: '2'
+services:
+  bot:
+    restart: always
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - mysql
+  redis:
+    restart: always
+    image: redis
+  mysql:
+   image: mariadb
+   volumes:
+     - ./db_data:/var/lib/mysql
+     - ./db_restore:/docker-entrypoint-initdb.d
+   restart: always
+   environment:
+     MYSQL_ROOT_PASSWORD: litva
+     MYSQL_DATABASE: bitcoin_bot
+     MYSQL_USER: bitcoin_bot
+     MYSQL_PASSWORD: bitcoin_bot

@@ -1,0 +1,8 @@
+requests
+sqlalchemy
+mysqlclient
+pytelegrambotapi
+block-io
+redis
+
+
