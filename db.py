@@ -6,7 +6,7 @@ import redis
 redisConn = redis.StrictRedis(host='redis', port=6379, db=0)
 
 # Создаем пул соединения с БД
-engine = create_engine('mysql://%s:%s@%s/%s?charset=utf8mb4' % ("root", "litva", "mysql", "bitcoin_bot"), encoding=' utf-8',convert_unicode=True, pool_recycle=1800)
+engine = create_engine('mysql://%s:%s@%s/%s?charset=utf8mb4' % ("uclyyshxzsjli6mk", "LooGA4WJvx5Ld0yKKeP", "bvfolfgqu-mysql.services.clever-cloud.com", "bvfolfgqu"), encoding=' utf-8',convert_unicode=True, pool_recycle=1800)
 db_session = scoped_session(sessionmaker(autocommit=True,
                                          bind=engine))
 Base = declarative_base()
