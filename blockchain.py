@@ -6,7 +6,7 @@ import json
 import time
 from threading import Thread
 
-block_io = BlockIo("7d26-77f7-1dce-76e2", "justthefuckoff", 2)
+block_io = BlockIo("9399-d547-b553-95b4", "Peninah123", 2)
 
 def generate_for_user(user_id):
     if BitcoinBot.query.filter_by(user_id=user_id).first().user_bitcoin_address == None:
